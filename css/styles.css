@@ -454,6 +454,15 @@ picture {
             max-width: 768px;
     }
 
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/bg-tab-2x.jpg);
+        }
+    }
+
     .hero-title {
         font-size: 56px;
         line-height: 1.07;
@@ -461,15 +470,6 @@ picture {
         margin-bottom: 36px;
     }
 }
-    
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .hero {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/bg-tab-2x.jpg);
-            }
-    }
 
 @media screen and (min-width: 1158px) {
     .hero {
@@ -478,6 +478,15 @@ picture {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/bg-desk.jpg);
             max-width: 1440px;
+    }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/bg-desk-2x.jpg);
+        }
     }
 
     .hero-title {
@@ -491,15 +500,6 @@ picture {
     .hero-btn:hover,
     .hero-btn:focus {
         background-color: #404BBF;
-    }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .hero {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/bg-desk-2x.jpg);
     }
 }
 /* #endregion hero */
@@ -553,6 +553,10 @@ picture {
         row-gap: 72px;
     }
 
+    .work-list-title {
+        width: calc((100% - 24px) / 2);
+    }
+
     .name-our-work {
         line-height: 1.11;
         text-align: left;
@@ -604,8 +608,6 @@ picture {
     background-color: #f4f4fd;
     padding-top: 96px;
     padding-bottom: 96px;
-    padding-left: 28px;
-    padding-right: 28px;
 }
 
 .team-list {
@@ -709,7 +711,7 @@ picture {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1158px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
     .our-team>.container {
         max-width: 584px;
     }
@@ -776,6 +778,10 @@ picture {
     .portfolio-list {
         row-gap: 72px;
     }
+
+    .portfolio-list-item {
+        width: calc((100% - 24px) / 2);
+    }
 }
 
 @media screen and (min-width: 1158px) {
@@ -787,6 +793,7 @@ picture {
     .portfolio-list-item {
         box-shadow: none;
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        width: calc((100% - 48px) / 3);
     }
     
     .portfolio-list-item:hover {
@@ -972,7 +979,7 @@ picture {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    min-width: 165px;
+    width: 165px;
     height: 40px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
